@@ -1,22 +1,27 @@
-package demoFirstRun;
+package helpers;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
-import io.cucumber.java.Before;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.annotations.Test;
-
 import java.io.FileInputStream;
 import java.net.URL;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-
-public class FirstRun
+public class AppDriverManager
 {
-    AndroidDriver<AndroidElement> driver;
-    @Test
-    public void setup()
-    {
+    private AndroidDriver<AndroidElement> driver;
+    private static boolean startDriver = true;
+    private static String userDirectory = System.getProperty("user.dir");
+
+    public AndroidDriver<AndroidElement> getDriver() {
+        if(startDriver) {
+            // Can add switch case to create driver for Android or IOS
+            driver = createAndroidDriver();
+        }
+        return driver;
+    }
+
+    public AndroidDriver<AndroidElement> createAndroidDriver() {
         try {
             String userDirectory = System.getProperty("user.dir");
 
@@ -43,5 +48,16 @@ public class FirstRun
             System.out.println("Error Message : " + e.getMessage());
             e.printStackTrace();
         }
+        return driver;
+    }
+    public void closeAndroidDriver() throws InterruptedException {
+        if(driver == null) {
+            startDriver = true;
+            return;
+        }
+        Thread.sleep(2000);
+        driver.quit();
+        driver = null;
+        startDriver = true;
     }
 }
