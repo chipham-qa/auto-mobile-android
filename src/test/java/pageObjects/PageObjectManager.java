@@ -1,14 +1,13 @@
 package pageObjects;
 
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidElement;
 public class PageObjectManager
 {
-    public AndroidDriver<AndroidElement> driver;
+    public AndroidDriver driver;
     private LoginPage loginPage;
     // Declare the remaining page below
 
-    public PageObjectManager(AndroidDriver<AndroidElement> driver) {
+    public PageObjectManager(AndroidDriver driver) {
         this.driver = driver;
     }
 
