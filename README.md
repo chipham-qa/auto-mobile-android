@@ -56,7 +56,7 @@
 - Run command adb devices to see the name of the device
 - Check Android version to put correct value to platformVersion
 4. Run
-- You can run Feature file (src/test/resources/features/)
+- You can run Feature file (src/test/resources/features/) ![alt text](https://github.com/chipham-qa/auto-mobile-android/blob/main/images/device-name.png)
 - You can run Cucumber TestRunner from (src\test\java\testRunner)
 5. Extent Report
-- Config from src/test/resources/extent.properties
+- Config from src/test/resources/extent.properties  ![alt text](https://github.com/chipham-qa/auto-mobile-android/blob/main/images/report.png)
