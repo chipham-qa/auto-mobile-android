@@ -53,10 +53,10 @@
 1. Create a emulator device via Android Studio
 2. Start Server via Appium Desktop
 3. Depend your device create on the step 1. Get some infomation below. Config [env-demo.properties](src/main/resources/env-demo.properties)
-- Run command adb devices to see the name of the device
+- Run command adb devices to see the name of the device ![alt text](https://github.com/chipham-qa/auto-mobile-android/blob/main/images/device-name.png)
 - Check Android version to put correct value to platformVersion
 4. Run
-- You can run Feature file (src/test/resources/features/) ![alt text](https://github.com/chipham-qa/auto-mobile-android/blob/main/images/device-name.png)
+- You can run Feature file (src/test/resources/features/)
 - You can run Cucumber TestRunner from (src\test\java\testRunner)
 5. Extent Report
 - Config from src/test/resources/extent.properties  ![alt text](https://github.com/chipham-qa/auto-mobile-android/blob/main/images/report.png)
